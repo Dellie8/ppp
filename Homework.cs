@@ -1,12 +1,20 @@
-﻿namespace ConsoleApp2;
+﻿using System.Linq.Expressions;
+
+namespace ConsoleApp2;
 //expr.1
-int a = 5, b = 10;
-int temp = a;
-a = b;
-b = temp;
-a = a + b;
-b = a - b;
-a = a - b;
+class Program
+{
+    int a = 6, b = 7;
+    int temvar = a;
+    a = b;
+    b = temvar;
+    //second method (но так делать не стоит, так как возникнет риск переполнения памяти (если превысит значение типа int)) 
+    a = a + b;
+    b = a - b;
+    a = a - b;
+}
+
+//expr.2
 class Program
 {
     static void Main()
